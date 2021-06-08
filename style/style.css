@@ -287,7 +287,7 @@ footer{
     margin: 10px;
 }
 
-.footer-li:link, .footer-li:visited{
+.footer-li a:link, .footer-li a:visited{
     color: initial;
 }
 
