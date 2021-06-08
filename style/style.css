@@ -287,6 +287,10 @@ footer{
     margin: 10px;
 }
 
+.footer-li:link, .footer-li:visited{
+    color: initial;
+}
+
 .footer-li::before{
     background: rgba(0, 0, 0, 0.37);
     content: "";
