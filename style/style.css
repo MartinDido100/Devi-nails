@@ -1,6 +1,4 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 30px;
@@ -9,11 +7,267 @@
 html body{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and nav */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px;
+}
+
+.nav-ul{
+    margin-left: 25px;
+}
+
+.nav-li{
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 30px ;
+}
+
+.nav-li::after{
+    position: absolute;
+    content:"";
+    top: 25px;
+    right: -15px;
+    border-right:1px solid rgba(128, 128, 128, 0.26) ;
+    height: 30px;
+}
+
+.courses{
+    padding-right: 30px;
+}
+
+#arrow{
+    position: absolute;
+    left: 83px;
+    top: 27px;
+    font-size: 20px;
+}
+
+.logo{
+    display: inline-block;
+    padding: 30px 0 30px 30px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.nav-li-ul{
+    display: none;
+    list-style-type: none;
+    background: #eee;
+    border-radius: 5px;
+    position: absolute;
+    right: -25px;
+    text-align: justify;
+    width: 150px;
+    margin-top: 20px;
+    z-index: 100;
+}
+
+.nav-li-ul li{
+    font-size: 20px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.main-img-container{
+    position: relative;
+    height: 50vh;
+}
+
+.main-img-container::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background: rgba(80, 77, 77, 0.219);
+    top: 85%;
+    left: 5%;
+    border-radius: 50%;
 }
 
 .main-first-img{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto 200px auto;
+    display: block;
+}
+
+    /* Header and nav */
+
+        /* Main */
+
+main{
+    background: #eee;
+}
+
+    /* Courses */
+
+.main-courses-container{
+    background: #eee;
+}
+
+.grid-courses-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: (2, minmax(min-content, max-content));
+    justify-content: center;
+    grid-gap: 50px;
+    padding: 0 0 60px 0;
+}
+
+.main-courses-title{
+    text-align: center;
+    padding: 30px 0 60px 0;
+}
+
+.course-img{
+    width: 400px;
+    height: 600px;
+    border-radius: 5px;
+}
+
+.course-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /* Courses */
+
+    /* Contact section */
+
+.main-contact{
+    background: rgb(251, 143, 255);
+    height: 270px;
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-contact h2{
+    line-height: 50px;
+    color: rgb(247, 238, 238);
+    font-size: 35px;
+}
+
+.main-contact p{
+    color: rgb(247, 238, 238);
+    font-size: 23px;
+}
+
+.contact-button{
+    background: white;
+    color: black;
+    margin-top: 20px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.contact-button:hover{
+    background: rgb(235, 234, 234);
+}
+    /* Contact section */
+
+    /* About me */
+
+    .main-about-container{
+        border-radius: 10px;
+        background: rgb(190, 76, 194);
+        height: 500px;
+        width: 50%;
+        margin: 50px auto;
+        box-shadow: 0px 0px 24px 5px rgba(253, 160, 255, 1);
+        -webkit-box-shadow: 0px 0px 24px 5px rgba(253, 160, 255, 1);
+        -moz-box-shadow: 0px 0px 24px 5px rgba(253, 160, 255, 1);
+    }
+
+    .about-title{
+        text-align: center;
+        padding-top: 50px;
+        font-size: 40px;
+        color: rgb(230, 218, 218);
+    }
+
+    .about-text{
+        margin-top: -10px;
+        text-align: justify;
+        padding: 50px;
+        color: rgb(230, 218, 218);
+    }
+    
+    /* About me */
+
+    /* Galerry */
+
+.gallery-container{
+    margin: 30px;
+    padding: 50px;
+}
+
+.gallery-container h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+    /*Slider*/
+ 
+.splide{
+    margin: 30px auto;
+    box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
+    -webkit-box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
+    -moz-box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
+}
+
+.splide__track{
+    border-radius: 5px;
+}
+
+.splide__arrow{
+    background: none;
+}
+
+path{
+    fill: white;
+}
+
+.splide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.splide__pagination__page{
+    display: none;
+}
+
+     /*Slider*/
+    /* Gallery */
+
+    /* MAIN */
+
+    /* Footer */
+
+footer{
+    background: rgb(185, 183, 183);
 }
 
 .footer-li-social{

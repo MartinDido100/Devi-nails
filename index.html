@@ -6,78 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devi Nails | Uñas para diosas</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </head>
 <body>
     <header class="header">
         <nav class="header-nav">
+            <div class="logo">DEVI NAILS</div>
             <ul class="nav-ul">
-                <li><h2>DEVI NAILS</h2></li>
-                <li class="nav-li">
+                <li class="nav-li courses">
                     Cursos
-                    <i class="fas fa-sort-down"></i>
+                    <i class="fas fa-sort-down" id="arrow"></i>
                     <ul class="nav-li-ul">
                         <li class="nav-li-ul-item">AAAA</li>
                         <li class="nav-li-ul-item">AAAA</li>
                         <li class="nav-li-ul-item">AAAA</li>
                     </ul>
                 </li>
-                <li class="nav-li">GALERIA</li>
-                <li class="nav-li">SOBRE MI</li>
-                <li class="nav-li"><i class="fas fa-search"></i></li>
+                <li class="nav-li ">Galeria</li>
+                <li class="nav-li sobre">Sobre Mi</li>
             </ul>
         </nav>
+        <div class="main-img-container"><img src="https://i.pinimg.com/originals/f5/e5/22/f5e522adbfb8a209f7b9aeeb18b02dad.jpg" alt="" class="main-first-img"></div>
     </header>
     <main class="main">
-        <div class="img-container"><img src="https://i.pinimg.com/originals/f5/e5/22/f5e522adbfb8a209f7b9aeeb18b02dad.jpg" alt="" class="main-first-img"></div>
-        <h2>CURSOS DISPONIBLES</h2>
-        <div class="main-courses-container">
-            <div class="course-item">
-                <img src="https://i.pinimg.com/originals/f5/e5/22/f5e522adbfb8a209f7b9aeeb18b02dad.jpg" alt="" class="main-first-img">
-                <br>AAAAAAAAAAAAAAAAAAAAA
-            </div>
-            <div class="course-item">
-                <img src="https://i.pinimg.com/originals/f5/e5/22/f5e522adbfb8a209f7b9aeeb18b02dad.jpg" alt="" class="main-first-img">
-                <br>AAAAAAAAAAAAAAAAAAAAA
-            </div>
-            <div class="course-item">
-                <img src="https://i.pinimg.com/originals/f5/e5/22/f5e522adbfb8a209f7b9aeeb18b02dad.jpg" alt="" class="main-first-img">
-                <br>AAAAAAAAAAAAAAAAAAAAA
-            </div>
+        <div class="main-courses-container">            
+            <h2 class="main-courses-title">CURSOS DISPONIBLES</h2>
+            <div class="grid-courses-container">
+                <div class="course-card">               
+                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg" class="course-img">
+                    <br>AAAAAAAAAAAAAAAAAAAAA
+                </div>
+                <div class="course-card">
+                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg" class="course-img">
+                    <br>AAAAAAAAAAAAAAAAAAAAA
+                </div>
+                <div class="course-card">
+                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg" class="course-img">
+                    <br>AAAAAAAAAAAAAAAAAAAAA
+                </div>
+                <div class="course-card">
+                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg" class="course-img">
+                    <br>AAAAAAAAAAAAAAAAAAAAA
+                </div>
+            </div> 
         </div>
         <div class="main-contact">
-            <h2>SI TENES CONSULTAS</h2>
+            <h2>Si tenes consultas,</h2>
             <p>No dudes en contactarme</p>
-            <button class="contact-button">CONTACTAME</button>
+            <button class="contact-button">Contacto</button>
         </div>
-        <div class="main-about-conatiner">
-            <h2 class="about-item">Sobre Devi Nails</h2>
+        <div class="main-about-container">
+            <h2 class="about-title">Sobre Devi Nails</h2>
             <p class="about-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus animi amet ipsum aut, ab eligendi dolorum hic quis commodi, voluptas numquam maiores consequatur blanditiis. Quos cum doloremque porro aperiam! Explicabo.
             Rerum, corrupti. Nisi facilis accusamus reiciendis ipsum provident at enim atque possimus, aut nam architecto eaque perspiciatis veniam distinctio cupiditate officiis deleniti dicta odit animi sint. Asperiores voluptate accusantium assumenda?</p>
         </div>
-        <h2>GALERIA</h2>
-        <div class="main-gallery-container">
-            <i class="fas fa-chevron-circle-left"></i>
-                <div class="photos-container">
-                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg">
-                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg">
-                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg">
-                    <img src="https://i.blogs.es/594843/chrome/450_1000.jpg">
-                </div>
-            <i class="fas fa-chevron-circle-right"></i>
-        </div>
-        <div class="gallery-dots">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <div class="gallery-container">
+            <h2>Galeria</h2>
+            <div id="image-slider" class="splide">
+            	<div class="splide__track">
+            		<ul class="splide__list">
+            			<li class="splide__slide">
+            				<img src="https://i.blogs.es/594843/chrome/450_1000.jpg">
+            			</li>
+            			<li class="splide__slide">
+            				<img src="https://i.blogs.es/594843/chrome/450_1000.jpg">
+            			</li>
+            			<li class="splide__slide">
+            				<img src="https://i.pinimg.com/originals/f5/e5/22/f5e522adbfb8a209f7b9aeeb18b02dad.jpg">
+            			</li>
+            		</ul>
+            	</div>
+	        </div>
         </div>
     </main>
     <footer class="footer">
         <ul class="footer-ul">
-            <li class="footer-li"><a href="">Inicio</a></li>
-            <li class="footer-li"><a href="">Sobre mi</a></li>
-            <li class="footer-li"><a href="">Contacto</a></li>
-            <li class="footer-li"><a href="">Galeria</a></li>
+            <li class="footer-li"><a href="#">Inicio</a></li>
+            <li class="footer-li"><a href="#">Sobre mi</a></li>
+            <li class="footer-li"><a href="#">Contacto</a></li>
+            <li class="footer-li"><a href="#">Galeria</a></li>
         </ul>
         <ul class="footer-ul-social">
             <li class="footer-li-social"><a href="#"><img src="images/icons/facebook-icon.svg" alt=""></a></li>
