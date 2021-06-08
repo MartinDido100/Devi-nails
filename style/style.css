@@ -118,8 +118,8 @@ main{
 
 .grid-courses-container{
     display: grid;
-    grid-template-columns: repeat(2, minmax(min-content, max-content));
-    grid-template-rows: (2, minmax(min-content, max-content));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: (2, 1fr);
     justify-content: center;
     grid-gap: 50px;
     padding: 0 0 60px 0;
@@ -131,8 +131,8 @@ main{
 }
 
 .course-img{
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     border-radius: 5px;
 }
 
@@ -192,7 +192,7 @@ main{
         border-radius: 10px;
         background: rgb(190, 76, 194);
         height: 500px;
-        width: 50%;
+        width: 70vh;
         margin: 50px auto;
         box-shadow: 0px 0px 24px 5px rgba(253, 160, 255, 1);
         -webkit-box-shadow: 0px 0px 24px 5px rgba(253, 160, 255, 1);
@@ -207,6 +207,7 @@ main{
     }
 
     .about-text{
+        font-size: 25px;
         margin-top: -10px;
         text-align: justify;
         padding: 50px;
@@ -268,13 +269,68 @@ path{
 
 footer{
     background: rgb(185, 183, 183);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-ul{
+    align-self: flex-start;
+    margin: 15px 30px 15px 250px;
+}
+
+.footer-li{
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+.footer-li::before{
+    background: rgba(0, 0, 0, 0.37);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 2px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.footer-li:hover::before{
+    opacity: 1;
+}
+
+.footer-li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-ul-social{
+    margin-right: 30px;
+    margin-bottom: 15px;
+    align-self: flex-end;
 }
 
 .footer-li-social{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(41, 41, 41);
+    text-align: center;
     display: inline-block;
+    transition: .2s ease-in-out;
+    cursor: pointer;
 }
 
-.footer-li-social img{
-    width: 50px;
-    height: 50px;
+.footer-li-social i{
+    font-size: 20px;
+    color: #eee;
+    text-align: center;
+}
+
+.footer-li-social:hover{
+    background: rgba(0, 0, 0, 0.938);
 }

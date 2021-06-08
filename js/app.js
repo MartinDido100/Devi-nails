@@ -9,3 +9,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
         pauseOnHover: false,
 	} ).mount();
 } );
+
+//Click en contenedor
+
+const socialsContainer = document.querySelectorAll(".footer-li-social");
+let socials = [];
+
+socialsContainer.forEach(element => {
+    element.addEventListener("click",()=>{
+        window.open(element.firstChild.href);
+    })
+});
