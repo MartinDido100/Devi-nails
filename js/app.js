@@ -1,3 +1,5 @@
+//Gallery code
+
 document.addEventListener( 'DOMContentLoaded', function () {
 	new Splide( '#image-slider', {
 		width : '80%',
@@ -10,7 +12,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	} ).mount();
 } );
 
-//Click en contenedor
+//Gallery code
+
+//Enables clickable social icon container
 
 const socialsContainer = document.querySelectorAll(".footer-li-social");
 let socials = [];
@@ -20,3 +24,7 @@ socialsContainer.forEach(element => {
         window.open(element.firstChild.href);
     })
 });
+
+//Enables clickable social icon container
+
+

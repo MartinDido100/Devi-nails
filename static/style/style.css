@@ -12,6 +12,61 @@ html body{
 }
 
 /* Header and nav */
+header{
+    min-height: 100vh;
+}
+
+.bg-img-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slide 30s infinite;
+}
+
+@keyframes slide{
+    0%{
+        background-image: url(https://www.wallpapertip.com/wmimgs/91-914296_wallpapers-4k-para-pc-fondos-de-pantalla-4k.jpg);
+    }
+    20%{
+        background-image: url(https://www.wallpapertip.com/wmimgs/91-914296_wallpapers-4k-para-pc-fondos-de-pantalla-4k.jpg);
+    }
+    25%{
+        background-image: url(https://fondosmil.com/fondo/17009.jpg);
+    }
+    45%{
+        background-image: url(https://fondosmil.com/fondo/17009.jpg);
+    }
+    50%{
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/53/Vaporwave-4K-Wallpapers.jpg);
+    }
+    70%{
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/53/Vaporwave-4K-Wallpapers.jpg);
+    }
+    75%{
+        background-image: url(https://i.pinimg.com/originals/b8/b8/f9/b8b8f99ef7271b7e377eef7db59b41ae.jpg);
+    }
+    95%{
+        background-image: url(https://i.pinimg.com/originals/b8/b8/f9/b8b8f99ef7271b7e377eef7db59b41ae.jpg);
+    }
+    100%{
+        background-image: url(https://www.wallpapertip.com/wmimgs/91-914296_wallpapers-4k-para-pc-fondos-de-pantalla-4k.jpg);
+    }
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -50;
+    min-height: 100vh;
+    background: rgb(77, 77, 77);
+    opacity: .5;
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -25,6 +80,7 @@ nav{
 }
 
 .nav-li{
+    color: rgb(204, 195, 195);
     display: inline-block;
     padding: 15px;
     font-size: 20px;
@@ -55,10 +111,12 @@ nav{
 }
 
 .logo{
+    position: relative;
     display: inline-block;
     padding: 30px 0 30px 30px;
     cursor: pointer;
     margin-left: 100px;
+    color: white;
 }
 
 .nav-li-ul{
@@ -78,28 +136,6 @@ nav{
     font-size: 20px;
     line-height: 40px;
     padding-left: 20px;
-}
-.main-img-container{
-    position: relative;
-    height: 50vh;
-}
-
-.main-img-container::before{
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 90%;
-    background: rgba(80, 77, 77, 0.219);
-    top: 85%;
-    left: 5%;
-    border-radius: 50%;
-}
-
-.main-first-img{
-    width: 300px;
-    height: 300px;
-    margin: 100px auto 200px auto;
-    display: block;
 }
 
     /* Header and nav */
@@ -232,6 +268,7 @@ main{
     /*Slider*/
  
 .splide{
+
     margin: 30px auto;
     box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
     -webkit-box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
@@ -245,6 +282,7 @@ main{
 .splide__arrow{
     background: none;
 }
+
 
 path{
     fill: white;
