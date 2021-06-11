@@ -10,27 +10,36 @@ html body {
     display: flex;
     flex-direction: column;
 }
-body::-webkit-scrollbar {
-    display: none;
-}
 /* Header and nav */
 header {
-    min-height: 100vh;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+
 }
 
 .load {
     /* Carga las imagenes rapido para mostrarlas sin delay*/
-    animation: slide 1s;
+    animation: slide 2s;
 }
 
 .bg-img-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     background-size: cover;
     background-position: center;
     z-index: -100;
-    animation: slide 30s infinite;
+    animation: slide 15s infinite;
+}
+
+.blur{
+    background: rgba(187, 187, 187, 0.144);
+    backdrop-filter: blur(8px);
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
 }
 
 @keyframes slide {
@@ -71,22 +80,11 @@ header {
     }
 }
 
-header::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    z-index: -50;
-    min-height: 100vh;
-    background: rgb(0, 0, 0);
-    opacity: 0.7;
-}
+
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
 }
 
 .nav-ul {
@@ -95,7 +93,7 @@ nav {
 }
 
 .nav-li {
-    color: rgb(204, 195, 195);
+    color: rgb(255, 255, 255);
     display: inline-block;
     margin: 0 100px;
     font-size: 50px;
@@ -117,16 +115,47 @@ nav {
 #arrow {
     position: absolute;
     right: 0;
-    top: 13px;
+    top: 33px;
     font-size: 30px;
 }
 
 .logo {
+    align-self: flex-start;
     position: absolute;
     padding: 30px 0 30px 30px;
     cursor: pointer;
     margin-left: 100px;
     user-select: none;
+    color: white;
+}
+
+.down-button{
+    position: absolute;
+    top: 88.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@keyframes move{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.down-button i{
+    line-height: 65px;
+    font-size: 50px;
     color: white;
 }
 
@@ -138,7 +167,8 @@ nav {
     background: #eee;
     border-radius: 5px;
     position: absolute;
-    top: 65px;
+    text-align: justify;
+    top: 80px;
     left: -5px;
     width: 200px;
 }
@@ -155,10 +185,14 @@ nav {
 /* Main */
 
 main {
-    background: rgb(165, 163, 163);
+    background-image: url(../../images/watercolor.png);
 }
 
 /* Courses */
+
+.main-courses-container{
+    margin-top: 30px;
+}
 
 .grid-courses-container {
     display: grid;
@@ -191,7 +225,7 @@ main {
 /* Contact section */
 
 .main-contact {
-    background: rgb(251, 143, 255);
+    background: #ffeae0;
     height: 270px;
     width: 100%;
     margin: 30px auto;
@@ -203,12 +237,13 @@ main {
 
 .main-contact h2 {
     line-height: 50px;
-    color: rgb(247, 238, 238);
+    color: black;
+    font-weight:500;
     font-size: 35px;
 }
 
 .main-contact p {
-    color: rgb(247, 238, 238);
+    color: black;
     font-size: 23px;
 }
 
@@ -226,7 +261,7 @@ main {
 }
 
 .contact-button:hover {
-    background: rgb(235, 234, 234);
+    background: rgb(194, 192, 192);
 }
 
 /* Contact section */
@@ -278,9 +313,6 @@ main {
 
 .splide {
     margin: 30px auto;
-    box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
-    -webkit-box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
-    -moz-box-shadow: 0px 2px 17px -2px rgba(253, 0, 255, 1);
 }
 
 .splide__track {

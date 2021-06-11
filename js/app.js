@@ -72,4 +72,18 @@ const contactButton = document.querySelector(".contact-button");
 
 contactButton.addEventListener("click",()=>{
     window.open("../static/style/style.css","_self");
-})
+});
+
+
+const downButton = document.querySelector(".down-button");
+let animation = false;
+
+setInterval(() => {
+    if (animation == false) {
+        downButton.style.animation = "move 2s";
+        animation = true;
+    }else{
+            downButton.style.animation = "none";
+            animation = false;
+    }
+}, 3000);
