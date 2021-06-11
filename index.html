@@ -11,25 +11,28 @@
     <link rel="stylesheet" href="static/style/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </head>
-<body>
+<body class="os-theme-dark: built-in">
     <header class="header">
         <div class="bg-img-container">
             <div class="load"></div>
         </div>
+        <div class="logo">DEVI NAILS</div>
         <nav class="header-nav">
-            <div class="logo">DEVI NAILS</div>
             <ul class="nav-ul">
-                <li class="nav-li courses">
-                    Cursos
-                    <i class="fas fa-sort-down" id="arrow"></i>
+                <li class="nav-li courses-container" id="courses-button">
+                    <div class="courses">
+                        Cursos
+                        <i class="fas fa-sort-down" id="arrow"></i>
+                    </div>
                     <ul class="nav-li-ul">
                         <li class="nav-li-ul-item">AAAA</li>
                         <li class="nav-li-ul-item">AAAA</li>
                         <li class="nav-li-ul-item">AAAA</li>
                     </ul>
-                </li>
-                <li class="nav-li ">Galeria</li>
-                <li class="nav-li sobre">Sobre Mi</li>
+                </li>   
+                <li class="nav-li" link-to="gallery-container">Galeria</li>
+                <li class="nav-li" link-to="main-about-container">Sobre Mi</li>
+                <li class="nav-li" link-to="main-contact">Contacto</li>
             </ul>
         </nav>
 
