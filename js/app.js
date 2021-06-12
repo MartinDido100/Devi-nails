@@ -14,19 +14,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 //Gallery code
 
-//Enables clickable social icon container
-
-const socialsContainer = document.querySelectorAll(".footer-li-social");
-let socials = [];
-
-socialsContainer.forEach(element => {
-    element.addEventListener("click",()=>{
-        window.open(element.firstChild.href);
-    })
-});
-
-//Enables clickable social icon container
-
 // Shows course on hover
 
 const coursesContainer = document.querySelector(".courses-container")
@@ -64,7 +51,7 @@ navItems.forEach(x =>{
         document.querySelector(`.${x.getAttribute("link-to")}`).scrollIntoView({behavior:"smooth",block:"center"});
         body.style.overflow = "scroll"
     })
-})
+});
 
 // Go to the linked element on click
 
@@ -74,6 +61,7 @@ contactButton.addEventListener("click",()=>{
     window.open("../static/style/style.css","_self");
 });
 
+// Down arrow animation after 3 seconds
 
 const downButton = document.querySelector(".down-button");
 let animation = false;
@@ -87,3 +75,6 @@ setInterval(() => {
             animation = false;
     }
 }, 3000);
+
+// Down arrow animation after 3 seconds
+
