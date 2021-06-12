@@ -14,46 +14,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 //Gallery code
 
-// Shows course on hover
-
-const coursesContainer = document.querySelector(".courses-container")
-const coursesButton = document.querySelector(".courses");
-const coursesHiddenScreen = document.querySelector(".nav-li-ul");
-const courseItems = document.querySelectorAll(".nav-li-ul-item");
-
-coursesButton.addEventListener("mouseover",()=>{
-    coursesHiddenScreen.style.opacity = "1";
-    courseItems.forEach((x) =>{
-        x.style.cursor = "pointer";
-    });
-});
-
-
-coursesContainer.addEventListener("mouseleave",()=>{
-    coursesHiddenScreen.style.opacity = "0";
-    courseItems.forEach((x) =>{
-        x.style.cursor = "initial";
-    });
-})
-
-// Shows course on hover
-
-// Go to the linked element on click
+// Go to top onlad
 
 window.addEventListener("beforeunload",()=>{
-    window.scrollTo(0,0);
-})
-
-const navItems = document.querySelectorAll(".nav-li:not(#courses-button)");
-
-navItems.forEach(x =>{
-    x.addEventListener("click",()=>{
-        document.querySelector(`.${x.getAttribute("link-to")}`).scrollIntoView({behavior:"smooth",block:"center"});
-        body.style.overflow = "scroll"
-    })
+    window.scroll(0,0);
 });
 
-// Go to the linked element on click
+// Go to top onlad
 
 const contactButton = document.querySelector(".contact-button");
 
@@ -61,20 +28,53 @@ contactButton.addEventListener("click",()=>{
     window.open("../static/style/style.css","_self");
 });
 
-// Down arrow animation after 3 seconds
+// Down arrow events
 
 const downButton = document.querySelector(".down-button");
-let animation = false;
 
 setInterval(() => {
-    if (animation == false) {
-        downButton.style.animation = "move 2s";
-        animation = true;
-    }else{
-            downButton.style.animation = "none";
-            animation = false;
-    }
+    downButton.style.animation = "move 1.5s";
+    downButton.addEventListener("animationend",()=> {
+        downButton.style.animation = "none";
+    });
 }, 3000);
 
-// Down arrow animation after 3 seconds
 
+downButton.addEventListener("click",(e)=>{
+    e.preventDefault();
+    window.scroll({
+        top: 800,
+        behavior:"smooth"
+    });
+})
+
+
+// Down arrow events
+
+//Go to up
+
+const upButton = document.querySelector(".up-button");
+
+
+window.addEventListener("scroll",()=>{
+    if (window.scrollY >= 800) {
+        upButton.style.opacity = "1";
+        upButton.style.cursor = "pointer";
+        upButton.style.pointerEvents = "all";
+    }else{
+        upButton.style.opacity = "0";
+        upButton.style.cursor = "initial";
+        upButton.style.pointerEvents = "none";
+    };
+    enableUpbutton();
+});
+
+
+const enableUpbutton = () =>{
+        upButton.addEventListener("click",()=>{
+            window.scroll({
+            top:0,
+            behavior:"smooth"
+            });
+        });
+}
