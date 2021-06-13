@@ -57,7 +57,7 @@ const upButton = document.querySelector(".up-button");
 
 
 window.addEventListener("scroll",()=>{
-    if (window.scrollY >= 800) {
+    if (window.scrollY >= 500) {
         upButton.style.opacity = "1";
         upButton.style.cursor = "pointer";
         upButton.style.pointerEvents = "all";

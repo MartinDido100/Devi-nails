@@ -164,6 +164,7 @@ path {
     height: 50px;
     opacity: 0;
     pointer-events: none;
+transition: all .3s;
 }
 
 .up-button i{   
