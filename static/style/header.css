@@ -7,6 +7,7 @@
 }
 
 body{
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -33,6 +34,8 @@ body{
 header {
     height: 100vh;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .load {
@@ -98,9 +101,8 @@ header {
 }
 
 nav {
-    margin: 0 auto;
-    height: 100vh;
     width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +114,6 @@ nav {
     backdrop-filter: blur(20px);
     background: rgba(187, 187, 187, 0.144);
     text-align: center;
-    transform: translateY(30%);
 }
 
 .nav-h2{
@@ -134,7 +135,6 @@ nav {
     margin: auto;
     width: 100px;
     user-select: none;
-    margin-top: 21%;
 }
 
 @keyframes move{
@@ -158,87 +158,59 @@ nav {
 
 /* Responsive */
 
-@media screen and (max-width: 1024px){
-    .blurred-nav{
-        width: 60%;
-    }
-    .down-button i{
+@media screen and (max-width: 1150px){
+    .nav-h2{
         font-size: 60px;
-        margin-top: 550%;
     }
 }
 
-@media screen and (max-width: 1000px){
-    .down-button i{
-        font-size: 60px;
-        margin-top: 220%;
+@media screen and (max-width: 985px){
+    .nav-h2{
+        font-size: 55px;
+    }
+    .blurred-nav{
+        width: 80%;
     }
 }
 
+@media screen and (max-width: 565px){
+    .nav-h2{
+        font-size: 50px;
+    }
+}
 
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 414px){
     .blurred-nav{
-        width: 70%;
         height: 400px;
     }
     .nav-h2{
-        font-size: 60px;
+        font-size: 38px;
     }
     .down-button{
-        margin-top: 42%;
+        padding-top: 30px;
+    }
+    .down-button i {
+        font-size: 50px;
     }
 }
 
-@media screen and (max-width: 610px){
-    .nav-h2{
-        font-size: 40px;
-    }
-    .down-button{
-        margin-top: 5%;
-    }
-}
-
-@media screen and (max-width: 510px){
-    .nav-h2{
-        font-size: 40px;
-    }
-    .down-button{
-        margin-top: 60%;
-    }
-}
-
-@media screen and (max-width: 415px){
+@media screen and (max-width: 375px){
     .blurred-nav{
-        width: 75%;
-        height: 320px;
-    }
-    .nav-h2{
-        font-size: 30px;
+        height: 350px;
     }
     .nav-logo{
         font-size: 20px;
     }
-    .down-button{
-        margin-top: 0;
+    .nav-h2{
+        font-size: 30px;
     }
 }
 
-@media screen and (max-width: 415px) and (min-width:361px){
-    .down-button{
-        margin-top: 15%;
-    }
-}
-
-@media screen and (max-width: 325px){
+@media screen and (max-width: 280px){
     .blurred-nav{
         height: 300px;
-        width: 80%;
     }
     .nav-h2{
-        font-size: 24px;
-    }
-    .down-button{
-        margin-top: -10%;
+        font-size: 25px;
     }
 }
