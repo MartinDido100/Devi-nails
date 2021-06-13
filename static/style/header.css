@@ -163,7 +163,7 @@ nav {
     text-align: center;
     cursor: pointer;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 4%;
 }
 
 @keyframes move{
@@ -180,7 +180,7 @@ nav {
 
 .down-button i{
     line-height: 65px;
-    font-size: 50px;
+    font-size: 80px;
     color: white;
 }
 
