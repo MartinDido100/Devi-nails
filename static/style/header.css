@@ -5,7 +5,6 @@
 }
 
 body{
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -158,12 +157,13 @@ nav {
 
 .down-button{
     text-align: center;
-    width: 60px;
     height: 60px;
     text-align: center;
     cursor: pointer;
     margin: auto;
-    margin-bottom: 4%;
+    margin-bottom: 20px;
+    background: red;
+    width: 100px;
 }
 
 @keyframes move{
@@ -237,6 +237,9 @@ nav {
     }
     .nav-h2{
         font-size: 40px;
+    }
+    .down-button{
+        margin-bottom: 100px;
     }
 }
 
