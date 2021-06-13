@@ -232,14 +232,14 @@ nav {
 }
 
 @media screen and (max-width: 510px){
+    header{
+        margin-top: 20px;
+    }
     .blurred-nav{
         height: 500px;
     }
     .nav-h2{
         font-size: 40px;
-    }
-    .down-button{
-        margin-bottom: 100px;
     }
 }
 
