@@ -16,9 +16,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 // Go to top onlad
 
-window.addEventListener("beforeunload",()=>{
+/* window.addEventListener("beforeunload",()=>{
     window.scroll(0,0);
-});
+}); */
 
 // Go to top onlad
 
@@ -31,6 +31,11 @@ contactButton.addEventListener("click",()=>{
 // Down arrow events
 
 const downButton = document.querySelector(".down-button");
+
+downButton.style.animation = "move 1.5s";
+downButton.addEventListener("animationend",()=> {
+    downButton.style.animation = "none";
+});
 
 setInterval(() => {
     downButton.style.animation = "move 1.5s";

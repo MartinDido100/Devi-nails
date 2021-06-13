@@ -107,7 +107,7 @@ nav {
 
 .blurred-nav{
     height: 500px;
-    width: 50%;     
+    width: 50%;   
     backdrop-filter: blur(20px);
     background: rgba(187, 187, 187, 0.144);
     text-align: center;
@@ -206,3 +206,48 @@ nav {
 } */
 
 /* Header and nav */
+
+/* Responsive */
+
+@media screen and (max-width: 1000px){
+    .blurred-nav{
+        width: 80%;
+    }
+
+    .down-button i{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .nav-h2{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 610px){
+    .nav-h2{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 510px){
+    .blurred-nav{
+        height: 500px;
+    }
+    .nav-h2{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .blurred-nav{
+        height: 400px;
+    }
+    .nav-h2{
+        font-size: 30px;
+    }
+    .nav-logo{
+        font-size: 20px;
+    }
+}
